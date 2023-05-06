@@ -21,9 +21,9 @@ jobs:
               "text": "안녕하세요 깃헙 액션에서 보내는 이진우봇입니다"
             }'
 
-    - name: Send message to Webex using pre-built action
-      uses: chrivand/action-webex-js@main
-      env:
-          WEBEX_TOKEN: ${{ secrets.WEBEX_TOKEN }}
-          WEBEX_ROOM_ID: ${{ secrets.WEBEX_ROOM_ID }}
-          MARKDOWN_MESSAGE: "**Hello, world! You just ran an action from ${{ github.repository }}.**"
+      - name: Send message to Webex using pre-built action
+        uses: chrivand/action-webex-js@main
+        env:
+            WEBEX_TOKEN: ${{ secrets.WEBEX_TOKEN }}
+            WEBEX_ROOM_ID: ${{ secrets.WEBEX_ROOM_ID }}
+            MARKDOWN_MESSAGE: "**Hello, world! You just ran an action from ${{ github.repository }}.**"
