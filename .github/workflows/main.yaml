@@ -9,12 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: GET GITHUB_ENV
+      - name: Get GITHUB_OUTPUT
         shell: bash
         run: |
-          echo $GITHUB_ENV
+          echo $GITHUB_OUTPUT
 
       - name: Say hello world 1
+        id: step1
         shell: bash
         run: |
           generatedValue1=$(echo $RANDOM)
@@ -23,6 +24,7 @@ jobs:
           echo "GEN_VALUE_1=$generatedValue1" >> $GITHUB_OUTPUT
   
       - name: Say hello world 2
+        id: step2
         shell: pwsh
         run: |
           $generatedValue2=$(Get-Random -Max 99999)
