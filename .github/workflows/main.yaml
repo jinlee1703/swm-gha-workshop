@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      JOB_VALUE_1: "This is a env variable from the JOB level"
+      JOB_VALUE_1: "This is a env variable from the JOB level #1"
 
     steps:
       - name: Say hello world 1
