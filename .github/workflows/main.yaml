@@ -67,7 +67,7 @@ jobs:
           STEP_VALUE_4: "This is a env variable from the STEP level #4"
         run: |
           echo "GLOBAL: ${{ env.GLOBAL_VALUE }}"
-          echo "JOB 1: $env: JOB_VALUE_1"
+          echo "JOB 1: $env:JOB_VALUE_1"
           echo "JOB 2: $env:JOB_VALUE_2"
           echo "STEP 1: $env:STEP_VALUE_1"
           echo "STEP 2: $env:STEP_VALUE_2"
