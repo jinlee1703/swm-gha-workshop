@@ -1,10 +1,11 @@
 name: 'Basic'
 
-on: push
+on: [ 'push', 'pull_request' ]
 
 jobs:
   first:
     name: 'First Job'
+    if: github.event_name == 'pull_request'
 
     strategy:
       matrix:
@@ -22,7 +23,7 @@ jobs:
       - name: Setup node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '${{ matrix.node }}'
 
       - name: Run only on Ubuntu
         if: matrix.os == 'ubuntu-latest'
